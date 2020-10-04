@@ -1,6 +1,6 @@
 import random
-min = 1
-max = 6
+min = 2
+max = 5
 
 roll_again = "yes, I would like to Roll Again!"
 
