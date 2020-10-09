@@ -1,0 +1,11 @@
+a = raw_input("Enter first number")
+
+b =raw_input("Enter second number")
+
+def average(a, b):
+
+  return (a + b) / 2
+
+avg=average = (a,b)
+
+print avg 
