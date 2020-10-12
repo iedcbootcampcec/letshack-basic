@@ -8,10 +8,10 @@ public class calculator {
         Scanner x = new Scanner(System.in);
         int n= x.nextInt();
         System.out.println("Enter the numbers");
-        Scanner y= new Scanner(System.in);
-        int a= y.nextInt();
-        Scanner z= new Scanner(System.in);
-        int b = z.nextInt();
+        
+        int a= x.nextInt();
+        
+        int b = x.nextInt();
         switch (n){
             case 1:
             System.out.println((a+b));
