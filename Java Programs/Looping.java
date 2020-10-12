@@ -5,8 +5,8 @@ public class ForLooping {
     } 
     int p=1;
     while (p<=6){
-      System.out.println(p)
-        p++;;
+      System.out.println(p);
+        p++;
     }
       
   }
