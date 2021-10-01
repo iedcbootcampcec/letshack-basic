@@ -27,7 +27,7 @@ int main()
         printf("enter the elements:");
         for(i=0;i<N;i++)
         {
-            scanf("%d",&ptr[i]);
+            scanf("%d",ptr[i]);
         }
     }
     void display(int N,int*ptr)
