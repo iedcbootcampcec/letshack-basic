@@ -9,3 +9,4 @@ def average(a, b):
 m=average = (a,b)
 
 print m
+print a
