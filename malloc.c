@@ -11,7 +11,7 @@ int main()
     ptr=(int*)malloc(n*sizeof(int));
     if(ptr==NULL)
     {
-        printf("memory not allocated");
+        printf("Memory not allocated");
         exit(0);
     }
     else
@@ -24,7 +24,7 @@ int main()
     void read(int N,int *ptr)
     {
         int i;
-        printf("enter the elements:");
+        printf("Enter the elements:");
         for(i=0;i<N;i++)
         {
             scanf("%d",ptr[i]);
@@ -33,7 +33,7 @@ int main()
     void display(int N,int*ptr)
     {
         int i;
-        printf("displaying elements:");
+        printf("Displaying Elements:");
         for ( i = 0; i < N; i++)
         {
             printf("%d ",ptr[i]);
