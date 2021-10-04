@@ -11,10 +11,11 @@ void * sumof(void*arg)
   int n1,n2,sum;
   n1=arr[0];
   n2=arr[1];
-  sum=n1+n2;
-  printf("Sum, %d+%d=%d \n", n1,n2,sum);
+  printf("Sum of two integers, %d+%d=%d \n", n1,n2,(n1+n2));
   return NULL;
 }
+
+// thread name- add
 
 int main()
 {
@@ -29,3 +30,6 @@ int main()
   pthread_exit(NULL);
   return 0;
 }
+
+// to complile- gcc filename.c -lpthread
+// to run- ./a.out
