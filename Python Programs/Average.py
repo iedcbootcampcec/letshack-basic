@@ -6,6 +6,7 @@ def average(a, b):
 
   return (a + b) / 2
 
-m=average = (a,b)
+m = average(a,b)
 
 print m
+print a

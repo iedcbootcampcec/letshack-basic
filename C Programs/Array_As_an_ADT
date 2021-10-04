@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+struct myArray{
+    int use_size;
+    int capacity;
+    int *ptr;
+};
+
+void CreateArray(struct myArray *a,int used_size,int full_capacity){
+    a->use_size =used_size;
+    a->capacity =full_capacity;
+    a->ptr =(int *)malloc(full_capacity * sizeof(int));
+}
+
+void Input(struct myArray *a){
+    int n;
+    for(int i=0;i<a->use_size;i++){
+        printf("Enter the elements to be inserted at position %d\n",i);
+        scanf("%d",&n);
+        (a->ptr)[i]=n;
+    }
+}
+
+void Display(struct myArray *a){
+    for(int i=0;i<a->use_size;i++){
+        printf("Element at position %d is %d\n",i,(a->ptr)[i]);
+    }
+}
+int main(){
+    struct myArray marks;
+    int use_size=6;
+    int capacity=100;
+    CreateArray(&marks,use_size,capacity );
+    Input(&marks);
+    Display(&marks);
+    return 0;
+}
