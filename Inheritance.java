@@ -1,4 +1,4 @@
-
+//program for inheritance
 //To show  single inheritance
 class singleinherit
    {
