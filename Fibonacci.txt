@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Fibonacci 
+	{
+
+       public static void main(String[] args) 
+		{
+		  int n, f1 = 0, f2 = 1;
+        	  Scanner sc=new Scanner(System.in);
+            System.out.println("How many Fibonacci terms do you want?");
+            n=sc.nextInt();
+            System.out.print("First " + n + " Fibonacci  terms: ");
+
+            for (int i = 1; i <= n; ++i)
+             {
+              System.out.print(f1+" ");
+              int sum = f1 + f2;
+              f1 = f2;
+              f2 = sum;
+             }
+          }
+     }
+	
+
+$javac Fibonacci.java
+$java Fibonacci
+Output
+How many Fibonacci terms do you want?
+10
+First 10 Fibonacci  terms: 0 1 1 2 3 5 8 13 21 34 
