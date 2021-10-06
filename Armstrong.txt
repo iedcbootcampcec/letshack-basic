@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Armstrong
+  {
+	public static void main(String[] args) 
+      {
+		 int origin,sum=0,rem,,temp,m=0;
+		 System.out.println("Enter a number");
+           Scanner sc=new Scanner(System.in);
+	      int n=sc.nextInt();
+	      origin=n;
+   		for(temp=n;temp!=0;++m)
+			temp/=10;
+	  
+		while(n!=0)
+			{rem=n%10;
+		  	 sum+=Math.pow(rem,m);
+		 	 n=n/10;
+			}
+		if(origin==sum)
+	  		System.out.println(origin+" is armstrong number");
+	  	else
+	   		System.out.println(origin+" is not armstrong number");
+		 
+	}
+}
+
+
+ 
+ $javac Armstrong.java
+ $java  Armstrong
+ output
+ Enter a number
+ 153 is armstrong number
