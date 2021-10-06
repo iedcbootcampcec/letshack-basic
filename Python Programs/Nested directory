@@ -1,0 +1,32 @@
+import os
+import shutil
+
+#name of folder to create
+fname=input('Enter folder name to create: ')  
+
+#defines sequence number of folder to open
+pasw=input('Enter the password: ')  
+
+#path of targeted folder
+todir='/home/ajith/Documents'   
+todir=os.path.join(todir,fname)
+os.mkdir(todir)
+
+#creating loop of folders
+for i in pasw:
+    for j in range(1,11):
+        path=os.path.join(todir,str(j))
+        try:
+            os.mkdir(path)
+        except:
+            print('error1')
+        for k in range(1,11):
+            path2=os.path.join(path,str(k))
+            try:
+                os.mkdir(path2)
+            except:
+                print('error2')
+            
+
+    todir=todir+'/'+i
+    
