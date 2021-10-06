@@ -1,0 +1,38 @@
+import java .util.Scanner;
+public class Palindrome
+ {
+   public static void main(String[] args) 
+    {
+     	Scanner sc=new Scanner(System.in);
+     	int n, reverse = 0, rem, origin;
+    	System.out.println("Enter an integer: ");
+  	n=sc.nextInt();
+    	origin= n;
+	while (n != 0) 
+	 {
+        rem = n % 10;
+        reverse= reverse* 10 + rem;
+        n /= 10;
+      }
+
+ 	if (origin== reverse)
+        System.out.println(origin +"  is a palindrome.");
+     else
+        System.out.println(origin+"  is not a palindrome.");
+
+    }
+  }
+
+$javac Palindrome.java
+$java Palindrome
+output 1
+Enter an integer:
+13531 
+13531  is a palindrome.
+
+$javac Palindrome.java
+$java Palindrome
+output 2
+Enter an integer:
+1972 
+1972  is not a palindrome.
