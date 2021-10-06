@@ -1,5 +1,5 @@
 
-//2. PROGRAM OF STF
+
 
 #include <stdio.h>
 

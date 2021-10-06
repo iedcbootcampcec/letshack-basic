@@ -1,3 +1,4 @@
+//Program for Palindrome
 package lab;
 
 public class Palindrome
