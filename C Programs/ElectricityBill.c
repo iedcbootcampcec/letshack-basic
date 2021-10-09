@@ -1,3 +1,4 @@
+/*Program to calculate electricity bill using pointer*/
 #include<stdio.h>
 struct Bill
 {
