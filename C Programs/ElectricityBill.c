@@ -1,5 +1,6 @@
 #include<stdio.h>
-struct Bill{
+struct Bill
+{
     char firstName[10];
     char lastName[10];
     char Address[20];
@@ -7,16 +8,21 @@ struct Bill{
     float presentUnit;
 };
 
-float generateBill(struct Bill temp){
+float generateBill(struct Bill temp)
+{
     float diff;
     diff = temp.presentUnit - temp.previousUnit;
-    if(diff > 20){
+    if(diff > 20)
+    {
         return diff*4.75;
-    }else{
+    }
+    else
+    {
         return 20*4.75+(diff-20)*7.75;
     }
 }
-int main(){
+void main()
+{
     struct Bill bill, *ptrEmp;
     ptrEmp = &bill;
 
@@ -43,5 +49,4 @@ int main(){
     printf("\nAddress: %s",ptrEmp->Address);
     printf("\nPrevious Unit: %.3f       Current Unit: %.3f",ptrEmp->previousUnit,ptrEmp->presentUnit);
     printf("\nCost: %.3f Rs\n\n", generateBill(bill));
-    return 0;
 }
