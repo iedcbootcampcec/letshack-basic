@@ -1,3 +1,4 @@
+//trapping rain water program
 class Main{
 
 public static int maxWater(int[] arr, int n)
