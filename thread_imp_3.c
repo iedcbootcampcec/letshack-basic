@@ -1,6 +1,3 @@
-//CProgram to create two thread and execute the addition of two numbers parallely in both threads.
-
-
 #include <stdio.h>
 #include <unistd.h>
 #include <pthread.h>
