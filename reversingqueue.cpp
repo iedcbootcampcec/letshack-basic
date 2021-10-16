@@ -1,3 +1,4 @@
+//reversing queue
 #include <bits/stdc++.h>
 # define MAX 5
 using namespace std;
