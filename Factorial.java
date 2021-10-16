@@ -1,4 +1,4 @@
-// Program for factorial
+
 package lab;
 
 public class Factorial 
