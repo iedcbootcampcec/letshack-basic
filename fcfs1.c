@@ -1,3 +1,4 @@
+//program for fcfs
 #include <stdio.h>
 
 void main()

@@ -1,4 +1,4 @@
-//Program for Armstrong
+//program for armstrong
 package lab;
 
 public class Armstrong

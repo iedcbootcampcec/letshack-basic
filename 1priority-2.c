@@ -1,6 +1,4 @@
-/* 
-    Non Premptive Priority Scheduling
-*/
+
 
 #include <stdio.h>
 
