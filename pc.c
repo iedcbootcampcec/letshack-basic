@@ -1,3 +1,4 @@
+//program for pc
 #include<stdio.h>
 #include<stdlib.h>
  

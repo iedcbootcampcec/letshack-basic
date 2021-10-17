@@ -1,6 +1,6 @@
-a = raw_input("Enter first number")
+a = float(input("Enter first number:"))
 
-b =raw_input("Enter second number")
+b =float(input("Enter second number:"))
 
 def average(a, b):
 
@@ -8,5 +8,5 @@ def average(a, b):
 
 m = average(a,b)
 
-print m
-print a
+print("The Average is {0}".format(m))
+

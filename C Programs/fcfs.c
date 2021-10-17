@@ -1,86 +1,45 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
-{   
-    int at[10],at2[10],bt[100],ex[100],seq[100],re[100],wt[100],tat[100];
-    int n,i,j,start,pos,max=0,min,idle=0,k=0;
-    float av1=0,av2=0;
+{
+  int i,n,at[20],bt[20],ct[20],tat[20],wt[20],sum=0;
+  float totWT=0,totTAT=0;
+  printf("Enter the no:of processes:");
+  scanf("%d",&n);
+ 
+  for(i=0;i<n;i++)
+  {
+        printf("\nEnter arrival time of process %d :",i);
+        scanf("%d",&at[i]);
+        printf("\nEnter burst time of process %d :",i);
+        scanf("%d",&bt[i]);
+  }
+ 
+  for(i=0;i<n;i++)
+  {
+        sum+=bt[i];
+        ct[i]=sum;
+  }
+ 
+  for(i=0;i<n;i++)
+  {
+        tat[i]=ct[i]-at[i];
+        totTAT+=tat[i];
+  }
+ 
+  for(i=0;i<n;i++)
+  {
+        wt[i]=tat[i]-bt[i];
+        totWT+=wt[i];
+  }
+  printf("\nTABLE");
+  printf("\n-----------");
+  printf("\n\nP.NO\t AT\t BT\t CT\t TA\t WT");
+ 
+  for(i=0;i<n;i++)
+    {
+        printf("\nP%d\t %d\t %d\t %d\t %d\t %d",i,at[i],bt[i],ct[i],tat[i],wt[i]);
+    }
 
-    printf("*****INPUT*****\n");
-    printf("Enter number of process\n");
-    scanf("%d",&n);
-    printf("Enter arrival time for processess\n");
-    for(i=0;i<n;i++)
-    {
-     scanf("%d",&at[i]);
-     at2[i]=at[i];
-    }
-    printf("Enter burst time for processess\n");
-    for(i=0;i<n;i++)
-    {
-     scanf("%d",&bt[i]);
-    }
-    start=at[0];
-    for(i=1;i<n;i++)
-    {
-      if(start>at[i])
-       {
-       start=at[i];
-       }
-     }
-    printf("*****OUTPUT*****\n");
-    printf("Sequence of execution is\n");
-    for(i=0;i<n;i++)
-    {
-    if(max<at[i])
-     {
-      max=at[i];
-     }
-    }
-    max=max+1;
-   for(i=0;i<n;i++,k++)
-     {  min=max;
-       for(j=0;j<n;j++){  
-           if(at[j]!=-1)
-             {
-               if(at[j]<min)
-                 {
-                  min=at[j];
-                  pos=j;
-                 }
-              }
-         }
-      printf("[P%d]  ",pos);
-      seq[k]=pos;
-      if(start<at[pos]){
-         re[pos]=start;
-         idle+=at[pos]-start;
-         start=at[pos];
-         start+=bt[pos];
-         at[pos]=-1;
-         ex[pos]=start;
-      }
-      else{
-        re[pos]=start;
-        start+=bt[pos];
-        at[pos]=-1;
-        ex[pos]=start;
-       }
-     }
-    printf("\n");
-    for(i=0;i<n;i++)
-    {
-       tat[i]=ex[i]-at2[i];
-       wt[i]=tat[i]-bt[i];
-    }
- printf("Process  Arrival-time(s)  Burst-time(s)  Waiting-time(s)  Turnaround-time(s)\n");
-   for(i=0;i<n;i++)
-    {
-      printf("P%d%d%d%d%d\n",i,at2[i],bt[i],wt[i],tat[i]);
-    }
-   for(i=0;i<n;i++)
-   {
-    av1+=tat[i];
-    av2+=wt[i];
-   }
-  printf("Average waiting time(s) %f\nAverage turnaroundtime(s) %f\nCPU idle time(s)%d\n",av2/n,av1/n,idle);
+  printf("\nAverage Turnaround Time: %f",totTAT/n);
+  printf("\nAverage Waiting Time: %f\n",totWT/n);
 }

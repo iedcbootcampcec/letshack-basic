@@ -1,5 +1,3 @@
-//3. PROGRAM OF ROUND ROBIN
-
 #include <stdio.h>
 
 void main ()
