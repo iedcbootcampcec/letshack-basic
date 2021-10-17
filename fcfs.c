@@ -4,7 +4,7 @@ void main()
 
 {
 
-int i,j,temp,n,at[25], bt[25], ct[25], tat[25],wt[25],sum=0;
+int i,j,temp,n,at[25]={0}, bt[25]={0}, ct[25]={0}, tat[25]={0},wt[25]={0},sum=0;
 float totWT=0, totTAT=0;
 
 printf ("Enter the no: of processer: ");
