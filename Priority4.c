@@ -1,4 +1,4 @@
-//4. PROGRAM OF PRIORITY
+
 
 #include <stdio.h> 
 void main()

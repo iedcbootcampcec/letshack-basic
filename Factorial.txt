@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Factorial
+	{
+	  static int factorial(int n)
+	    {
+            if(n==1)
+		 	return 1;
+		 else 
+		     return n*factorial(n-1);
+	    }
+	
+	  public static void main(String[] args) 
+	    {
+		int n;
+		System.out.println("Enter n the number till which you want factorial");
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		for(int i=1;i<=n;i++)
+		  System.out.println("factorial of"+i+"=" +factorial(i));
+		
+	}
+}
+
+
+$javac Factorial.java
+$java Factorial
+Output
+Enter n the number till which you want factorial
+5
+factorial of1=1
+factorial of2=2
+factorial of3=6
+factorial of4=24
+factorial of5=120

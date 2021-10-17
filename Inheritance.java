@@ -1,5 +1,4 @@
-
-//To show  single inheritance
+//inheritance program
 class singleinherit
    {
     public static void main(String args[])
