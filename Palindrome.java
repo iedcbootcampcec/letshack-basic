@@ -13,14 +13,10 @@ public class Palindrome
   n=n/10;
  }
  if(cpy==s)
-    {
       System.out.println("It is palindrome");
-    }
  else
-    {
       System.out.println("It is not palindrome");
-    }
-}
+ }
 }
 
 /*
