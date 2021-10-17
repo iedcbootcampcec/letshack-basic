@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int i, j, n;
-float tatAvg, wtAvg;
+float tatAvg=0.0, wtAvg=0.0;
 
 struct Process {
     int pId;
