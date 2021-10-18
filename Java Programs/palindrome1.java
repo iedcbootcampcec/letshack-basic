@@ -12,16 +12,12 @@ public class Palindrome {
 		{
 			r=n%10;
 			s=(s*10)+r;
-			n=n/10;
+			n/=10;
 		}
 		if(cpy==s)
-		{
 			System.out.println("It is palindrome");
-		}
 		else
-		{
 			System.out.println("It is not palindrome");
-		}
 	}
 
 }
