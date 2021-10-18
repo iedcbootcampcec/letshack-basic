@@ -4,7 +4,7 @@
 void main()
 
 { 
-int n, i, t, bt [20], at [20], j, sum = 0, bt1 [20], wt[20], tat[20], p [20], pro [30], index, pr=-1, temp = -1;
+int n, i, t, bt [20]={0}, at [20]={0}, j, sum = 0, bt1 [20]={0}, wt[20]={0}, tat[20]={0}, p [20]={0}, pro [30]={0}, index, pr=-1, temp = -1;
 
 float avg_wt=0, avg_tat=0; 
 printf ("Enter number of processes:"); 
@@ -53,7 +53,7 @@ pro[j] = temp;
 }
 
 } 
-sum=sum+bt[i]; 
+sum+=bt[i]; 
 bt1[i] = bt[i]; 
 wt [i]=0; 
 tat[i]=0; 
@@ -88,8 +88,8 @@ for (i=0;i<n; i++)
 
 printf ("p%d\t%d\t%d\t%d\t%d\n", (pro[i]+1), at [i], bt1[i], wt[i],tat[i]);
 
-avg_wt= avg_wt + wt[i]; 
-avg_tat= avg_tat + tat[i];
+avg_wt+=wt[i]; 
+avg_tat+=tat[i];
 
 }
 printf ("\n Average waiting time = %f\n Average turnaround time = %f",avg_wt/n,avg_tat/n);
