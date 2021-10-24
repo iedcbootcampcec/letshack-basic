@@ -10,8 +10,8 @@ public class Digit_Sum
         while(x > 0)
         {
             n = x % 10;
-            sum = sum + n;
-            x = x / 10;
+            sum += n;
+            x /= 10;
         }
         System.out.println("Sum of Digits:"+sum);
     }
