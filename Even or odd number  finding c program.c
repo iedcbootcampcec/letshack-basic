@@ -1,4 +1,4 @@
-
+// program to find  even or odd number
 #include <stdio.h>
 int main() {
   int num = 5;
