@@ -1,5 +1,5 @@
 
-
+//program for priority
 #include <stdio.h>
 
 int i, j, n;
