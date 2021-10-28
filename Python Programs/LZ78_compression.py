@@ -1,3 +1,6 @@
+# Wikipedia Article About LZ78 Compression:
+# https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ78
+
 def getItemIndex(dictionary, newItem):
     # set the index to 0
     itemIndex=0
