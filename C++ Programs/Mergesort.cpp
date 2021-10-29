@@ -1,81 +1,67 @@
-# Merge Sort is a kind of Divide and Conquer algorithm in computer programming. It is one of the most popular sorting algorithms and a great way to develop confidence in building recursive algorithms.
-
 #include<iostream>
+#include<bits/stdc++.h>
+
+
 using namespace std;
-int Merge(int A,int L,int R,)
-{
-  int i=0;
-  int j=0;
-  int k=0;
-  while(i<L.length() && j<R.length())
-  {
-    if(L[i]<=R[i])
-    {
-      A[k]=L[i];
-      i=i+1;
-      k=k+1;
-    }
-    else
-    {
-      A[k]=R[j];
-      j=j+1;
-      k=k+1;
-    }
-  }
-  while(i<L.length())
-  {
-    A[k]=L[i];
-    i=i+1;
-    k=k+1;
-  }
-  while(j<R.length())
-  {
-    A[k]=R[j];
-    j=j+1;
-    k=k+1;
-}
 
-void MergeSort(A)
-{
-  int n=A.length();
-  if(n<2)
-  {
-    return;
-  }
-  int mid=n/2;
-  for(i=0;i<mid-1;i++)
-  {
-    L[i]=A[i];
-  }
-  for(i=mid;i<n-1;i++)
-  {
-    R[i-mid]=A[i];
-  }
-  MergeSort(L);
-  MergeSort(R);
-  Merge(L,R,A);
-}
+int merge(vector <int> &arr,int s,int e){
+	int i=s;
+	int m =(s+e)/2;
+	int j = m+1;
+   vector <int> temp;
+    vector <int> res;
 
-int main()
-{
-int n, i;
-	cout<<"\nEnter the number of data element to be sorted: ";
-	cin>>n;
- 
-	int arr[n];
-	for(i = 0; i < n; i++)
-	{
-		cout<<"Enter element "<<i+1<<": ";
-		cin>>arr[i];
+
+   int cnt =0;
+	while(i <= m and j <=e){
+		    
+		if(arr[i]<arr[j]){
+			temp.push_back(arr[i]);
+			i++;
+		}else{
+			cnt += (m-i+1);
+			res.push_back(cnt);
+			temp.push_back(arr[j]);
+			j++;
+		};
+
+	};
+
+   while(i <=m){
+		temp.push_back(arr[i]);
+		i++;
 	}
- 
-	MergeSort(arr, 0, n-1);
- 
-	// Printing the sorted data.
-	cout<<"\nSorted Data ";
-	for (i = 0; i < n; i++)
-        cout<<"->"<<arr[i];
- 
-	return 0;
+	while(j <=e){
+		temp.push_back(arr[j]);
+		j++;
+	};
+   int k =0;
+   for(int idx = s; idx <=e;idx++){
+   	arr[idx] = temp[k++];
+   }
+   
+   return cnt;
 }
+
+int mergeSort(vector <int> &arr,int s ,int e){
+	if(s >= e){
+		return 0;
+	}
+
+	int mid = (s+e)/2;
+	int c1 = mergeSort(arr,s,mid);
+	int c2 =mergeSort(arr,mid+1,e);
+    int ci = merge(arr,s,e);
+
+    //merge function
+    return c1 +c2 + ci;
+
+}
+
+int main(){
+	vector <int> arr{3,66,5,2,78,9};
+	int s = 0;
+	int e = arr.size()-1;
+	cout << mergeSort(arr,s,e) <<endl;
+    return 0;
 }
