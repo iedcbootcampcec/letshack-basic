@@ -1,37 +1,36 @@
-/*
-   program to create a thread called add, which acess two integers from the user and print the sum.
-   
-*/
 #include <stdio.h>
-#include <pthread.h> //Include the header file " pthread.h ".
 #include <unistd.h>
+#include <pthread.h>
 
-int global[2];  //// Global variable
+int global[2];
 
-void *sum_thread(void *arg)
+void *sumOf(void *arg)
 {
+    int *arr;
+    arr = arg;
+
     int n1,n2,sum;
-    n1 = global[0];
-    n2 = global[1];
+    n1=arr[0];
+    n2=arr[1];
     sum = n1+n2;
 
-    printf("Sum = %d\n",sum);
+    printf("Sum , %d + %d = %d\n",n1,n2,sum);
 
     return NULL;
 }
-int main()
+
+int main() 
 {
-    printf("Enter the first integer:- ");
+    printf("Enter First number : ");
     scanf("%d",&global[0]);
 
-    printf("Enter the second integer:- ");
+    printf("Enter Second number : ");
     scanf("%d",&global[1]);
 
-    pthread_t add_thread;  //thread decleration.Here " pthread_t " is the datatype.
-    pthread_create(&add_thread, NULL, sum_thread, global);  //thread is created.
-    pthread_join(add_thread,NULL);  // // Waiting for the created thread to terminate.
-   
+    pthread_t add; //unsigned integer value that stores the thread id of the thread created.
+    pthread_create(&add,NULL,sumOf,global); //thread creation
+    pthread_join(add,NULL);//waiting for the termination of a thread.
+    printf("Thread ID: %lu ",add );//Printing thread ID
+
     return 0;
 }
-// to compile the program --->" gcc -o test prgrmName.c -pthread "
-//  instead of ./a.out use --> "  ./test  "   

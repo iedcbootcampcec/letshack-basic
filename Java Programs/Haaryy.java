@@ -1,22 +1,14 @@
-import java.io.*;
-public class Main {
+import java.util.*;
 
-    public static void main(String[] args) {
+public class tempConverter {
 
-        int num = 29;
-        boolean flag = false;
-        for(int i = 2; i <= num/2; ++i)
-        {
-            if(num % i == 0)
-            {
-                flag = true;
-                break;
-            }
-        }
+	public static void main(String[] args) {
+		System.out.println("Enter temperature in Celsius");
+		Scanner sc = new Scanner(System.in);
+		float temp=sc.nextFloat();
+		temp=(temp*9/5)+32;
+		System.out.println("Converted temp in Fahrenheat : "+temp);
+		sc.close();
+	}
 
-        if (!flag)
-            System.out.println(num + " is a prime number.");
-        else
-            System.out.println(num + " is not a prime number.");
-    }
 }
