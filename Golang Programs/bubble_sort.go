@@ -19,6 +19,7 @@ func bubbleSort(arr []int) []int {
 
 func main() {
 	usArr := []int{5, 2, 6, 3, 1, 4}
+	fmt.Println("Before sort: ", usArr)
 	sArr := bubbleSort(usArr)
-	fmt.Println(sArr)
+	fmt.Println("After sort: ", sArr)
 }
